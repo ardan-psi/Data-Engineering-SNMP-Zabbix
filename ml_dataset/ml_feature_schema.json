@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "purpose": "ML-ready numeric matrices for Isolation Forest.",
+  "entity_models": {
+    "interface": {
+      "input_feature_store": "interface_features.jsonl",
+      "features": [
+        "discard_total_rate_15m",
+        "discard_total_rate_5m",
+        "discard_total_rate_behavior_5m_change",
+        "error_total_rate_15m",
+        "error_total_rate_5m",
+        "error_total_rate_behavior_5m_change",
+        "in_bps_15m_mean",
+        "in_bps_5m_mean",
+        "in_bps_behavior_5m_change",
+        "in_discard_rate_15m_mean",
+        "in_discard_rate_5m_mean",
+        "in_error_rate_15m_mean",
+        "in_error_rate_5m_mean",
+        "oper_status_last",
+        "out_bps_15m_mean",
+        "out_bps_5m_mean",
+        "out_bps_behavior_5m_change",
+        "out_discard_rate_15m_mean",
+        "out_discard_rate_5m_mean",
+        "out_error_rate_15m_mean",
+        "out_error_rate_5m_mean",
+        "traffic_total_bps_15m",
+        "traffic_total_bps_5m",
+        "traffic_total_bps_behavior_5m_change",
+        "traffic_variability_5m"
+      ]
+    },
+    "device": {
+      "input_feature_store": "device_features.jsonl",
+      "features": [
+        "cpu_pct_15m_mean",
+        "cpu_pct_5m_mean",
+        "icmp_loss_pct_15m_mean",
+        "icmp_loss_pct_5m_mean",
+        "icmp_rtt_sec_15m_mean",
+        "icmp_rtt_sec_5m_mean",
+        "interface_count",
+        "interfaces_with_counter_reset",
+        "interfaces_with_oper_down"
+      ]
+    }
+  },
+  "quality_gate": {
+    "recent_coverage_min": 0.8,
+    "baseline_coverage_min": 0.8,
+    "warmup_rows_excluded_from_training": true
+  },
+  "preprocessing": {
+    "missing_values": {
+      "method": "median",
+      "fit_scope": "training_rows_only"
+    },
+    "scaling": {
+      "method": "zscore",
+      "fit_scope": "training_rows_only"
+    }
+  },
+  "leakage_policy": {
+    "time_split": "chronological",
+    "future_rows_used_for_fit": false,
+    "identifiers_as_features": false
+  },
+  "counter_reset_policy": "Counter reset signals remain contextual features in the feature store; they are not converted into negative traffic/error/discard rates."
+}

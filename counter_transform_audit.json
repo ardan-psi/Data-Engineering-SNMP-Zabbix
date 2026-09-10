@@ -1,0 +1,35 @@
+{
+  "input_file": "raw_history.jsonl",
+  "output_file": "transformed_history.jsonl",
+  "input": {
+    "total_records": 236510,
+    "numeric_records": 236510,
+    "skipped_records": 0,
+    "unique_items": 7023
+  },
+  "output": {
+    "total_records": 236510
+  },
+  "transformation": {
+    "direct_records": 145512,
+    "counter_first_samples": 3840,
+    "counter_transformed": 86927,
+    "counter_decreases": 231,
+    "duplicate_timestamps": 0,
+    "out_of_order_records": 0,
+    "invalid_delta_time": 0
+  },
+  "counter_decrease_by_metric": {
+    "out_discard_rate": 207,
+    "in_discard_rate": 24
+  },
+  "rules": {
+    "counter_formula": "delta_value / actual_delta_time_sec",
+    "counter_increase": "transform to rate",
+    "counter_decrease": "value=null and counter_reset=true; current sample becomes new baseline",
+    "duplicate_timestamp": "do not calculate delta; do not update previous sample",
+    "out_of_order": "do not calculate delta; do not update previous sample",
+    "gauge_rate_state": "pass through raw value",
+    "raw_history_immutable": true
+  }
+}

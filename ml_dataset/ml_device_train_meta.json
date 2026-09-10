@@ -1,0 +1,111 @@
+{
+  "entity_type": "device",
+  "split": "train",
+  "row_count": 2160,
+  "source_row_count": 2701,
+  "features": [
+    "cpu_pct_15m_mean",
+    "cpu_pct_5m_mean",
+    "icmp_loss_pct_15m_mean",
+    "icmp_loss_pct_5m_mean",
+    "icmp_rtt_sec_15m_mean",
+    "icmp_rtt_sec_5m_mean",
+    "interface_count",
+    "interfaces_with_counter_reset",
+    "interfaces_with_oper_down"
+  ],
+  "feature_count": 9,
+  "timestamp_range": {
+    "min": 1788766860,
+    "max": 1788769440
+  },
+  "imputation": {
+    "method": "median",
+    "medians": {
+      "cpu_pct_15m_mean": 5.1392014277777776,
+      "cpu_pct_5m_mean": 4.72713855,
+      "icmp_loss_pct_15m_mean": 0.0,
+      "icmp_loss_pct_5m_mean": 0.0,
+      "icmp_rtt_sec_15m_mean": 0.00010000000000000002,
+      "icmp_rtt_sec_5m_mean": 0.0001,
+      "interface_count": 0.0,
+      "interfaces_with_counter_reset": 0.0,
+      "interfaces_with_oper_down": 0.0
+    }
+  },
+  "scaling": {
+    "method": "zscore",
+    "parameters": {
+      "cpu_pct_15m_mean": {
+        "mean": 5.4259705381054895,
+        "std": 4.838744574263117
+      },
+      "cpu_pct_5m_mean": {
+        "mean": 5.190430591851852,
+        "std": 4.824426459896694
+      },
+      "icmp_loss_pct_15m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "icmp_loss_pct_5m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "icmp_rtt_sec_15m_mean": {
+        "mean": 0.0005273903001075571,
+        "std": 0.0008674976684643185
+      },
+      "icmp_rtt_sec_5m_mean": {
+        "mean": 0.0005349959567901234,
+        "std": 0.0011067602553326821
+      },
+      "interface_count": {
+        "mean": 13.659722222222221,
+        "std": 20.56814437147412
+      },
+      "interfaces_with_counter_reset": {
+        "mean": 0.3537037037037037,
+        "std": 2.0225316884358135
+      },
+      "interfaces_with_oper_down": {
+        "mean": 3.4430555555555555,
+        "std": 6.9603704880018356
+      }
+    }
+  },
+  "excluded_fields": [
+    "@timestamp",
+    "baseline_metric_coverage_ratio_5m",
+    "counter_reset_count_15m",
+    "counter_reset_count_5m",
+    "counter_reset_flag_15m",
+    "counter_reset_flag_5m",
+    "counter_reset_raw_context_sum_15m",
+    "counter_reset_raw_context_sum_5m",
+    "device_role",
+    "entity_type",
+    "feature_row_id",
+    "host",
+    "host_name",
+    "hostid",
+    "ifindex",
+    "metric_coverage_ratio_15m",
+    "metric_coverage_ratio_5m",
+    "metric_expected_count_15m",
+    "metric_expected_count_5m",
+    "metric_missing_count_15m",
+    "metric_missing_count_5m",
+    "metric_presence_count_15m",
+    "metric_presence_count_5m",
+    "ml_eligible",
+    "oper_status_change_count_15m",
+    "oper_status_change_count_5m",
+    "oper_status_change_flag_15m",
+    "oper_status_change_flag_5m",
+    "timestamp",
+    "training_eligible",
+    "uptime_reset_flag_15m",
+    "uptime_reset_flag_5m"
+  ]
+}

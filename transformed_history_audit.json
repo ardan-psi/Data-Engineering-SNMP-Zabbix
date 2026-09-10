@@ -1,0 +1,1319 @@
+{
+  "files": {
+    "raw": "raw_history.jsonl",
+    "transformed": "transformed_history.jsonl"
+  },
+  "input": {
+    "raw_records": 236510,
+    "raw_parse_errors": 0
+  },
+  "output": {
+    "transformed_records": 236510,
+    "transformed_parse_errors": 0
+  },
+  "semantic_types": {
+    "counter": 90998,
+    "gauge": 33030,
+    "rate": 57878,
+    "state": 54604
+  },
+  "transformations": {
+    "delta_rate": 90998,
+    "direct": 145512
+  },
+  "canonical_metrics": {
+    "cpu_pct": 20478,
+    "fan_status": 1180,
+    "icmp_loss_pct": 3180,
+    "icmp_rtt_sec": 3180,
+    "in_bps": 24317,
+    "in_discard_rate": 18127,
+    "in_error_rate": 18134,
+    "interface_counter": 18480,
+    "memory_pct": 1440,
+    "oper_status": 52944,
+    "out_bps": 24321,
+    "out_discard_rate": 18130,
+    "out_error_rate": 18127,
+    "psu_status": 480,
+    "rate": 9240,
+    "temperature_c": 1640,
+    "uptime": 3112
+  },
+  "counter_audit": {
+    "total": 90998,
+    "first_samples": 3840,
+    "increases": 211,
+    "decreases": 231,
+    "unchanged": 86716,
+    "formula_mismatches": 0,
+    "negative_rates": 0,
+    "decrease_by_metric": {
+      "in_discard_rate": 24,
+      "out_discard_rate": 207
+    }
+  },
+  "direct_audit": {
+    "total": 145512,
+    "expected_semantic": 145512,
+    "value_mismatches": 0
+  },
+  "timestamp_audit": {
+    "duplicate_timestamps": 0,
+    "out_of_order": 0,
+    "invalid_delta_time": 0
+  },
+  "raw_value_audit": {
+    "matched_raw_records": 236510,
+    "raw_value_mismatches": 0
+  },
+  "numeric_audit": {
+    "non_finite_values": 0
+  },
+  "value_distribution": {
+    "cpu_pct": {
+      "count": 20478,
+      "min": 0.0,
+      "max": 42.0,
+      "mean": 5.445831402724876,
+      "median": 4.85388
+    },
+    "fan_status": {
+      "count": 1180,
+      "min": 1.0,
+      "max": 3.0,
+      "mean": 1.7796610169491525,
+      "median": 2.0
+    },
+    "icmp_loss_pct": {
+      "count": 3180,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0
+    },
+    "icmp_rtt_sec": {
+      "count": 3180,
+      "min": 0.0001,
+      "max": 0.056433000000000004,
+      "mean": 0.0005188245283018868,
+      "median": 0.0001
+    },
+    "in_bps": {
+      "count": 24317,
+      "min": 0.0,
+      "max": 274617504.0,
+      "mean": 3487316.741045359,
+      "median": 120.0
+    },
+    "in_discard_rate": {
+      "count": 17220,
+      "min": 0.0,
+      "max": 0.027777777777777776,
+      "mean": 1.8066847335140017e-05,
+      "median": 0.0
+    },
+    "in_error_rate": {
+      "count": 17251,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0
+    },
+    "interface_counter": {
+      "count": 18172,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0
+    },
+    "memory_pct": {
+      "count": 1440,
+      "min": 6.169394841269842,
+      "max": 73.0,
+      "mean": 47.585624171377084,
+      "median": 56.0
+    },
+    "oper_status": {
+      "count": 52944,
+      "min": 1.0,
+      "max": 6.0,
+      "mean": 1.2586317618615896,
+      "median": 1.0
+    },
+    "out_bps": {
+      "count": 24321,
+      "min": 0.0,
+      "max": 274502608.0,
+      "mean": 3423765.6714773243,
+      "median": 488.0
+    },
+    "out_discard_rate": {
+      "count": 17040,
+      "min": 0.0,
+      "max": 0.12777777777777777,
+      "mean": 0.0003915268989136105,
+      "median": 0.0
+    },
+    "out_error_rate": {
+      "count": 17244,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0
+    },
+    "psu_status": {
+      "count": 480,
+      "min": 1.0,
+      "max": 5.0,
+      "mean": 2.3333333333333335,
+      "median": 2.0
+    },
+    "rate": {
+      "count": 9240,
+      "min": 0.0,
+      "max": 35963144.0,
+      "mean": 1234505.0588744588,
+      "median": 13096.0
+    },
+    "temperature_c": {
+      "count": 1640,
+      "min": 26.0,
+      "max": 69.0,
+      "mean": 44.24222012195121,
+      "median": 43.75
+    },
+    "uptime": {
+      "count": 3112,
+      "min": 579081.0,
+      "max": 28082926.0,
+      "mean": 5356072.650706941,
+      "median": 4955554.5
+    }
+  },
+  "issues": {
+    "total": 231,
+    "by_type": {
+      "reset_has_delta_value": 231
+    },
+    "by_severity": {
+      "high": 231
+    }
+  },
+  "details": {
+    "formula_mismatches": [],
+    "counter_decreases": [
+      {
+        "itemid": "73451",
+        "clock": 1788766824,
+        "previous_clock": 1788766644,
+        "previous_raw_value": 1.0,
+        "raw_value": 0.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788767364,
+        "previous_clock": 1788767184,
+        "previous_raw_value": 7.0,
+        "raw_value": 5.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788767544,
+        "previous_clock": 1788767364,
+        "previous_raw_value": 5.0,
+        "raw_value": 3.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788767724,
+        "previous_clock": 1788767544,
+        "previous_raw_value": 3.0,
+        "raw_value": 1.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788767904,
+        "previous_clock": 1788767724,
+        "previous_raw_value": 1.0,
+        "raw_value": 0.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788768444,
+        "previous_clock": 1788768264,
+        "previous_raw_value": 6.0,
+        "raw_value": 1.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788768984,
+        "previous_clock": 1788768804,
+        "previous_raw_value": 5.0,
+        "raw_value": 4.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788769164,
+        "previous_clock": 1788768984,
+        "previous_raw_value": 4.0,
+        "raw_value": 0.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788769704,
+        "previous_clock": 1788769524,
+        "previous_raw_value": 9.0,
+        "raw_value": 1.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73451",
+        "clock": 1788769884,
+        "previous_clock": 1788769704,
+        "previous_raw_value": 1.0,
+        "raw_value": 0.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788766824,
+        "previous_clock": 1788766644,
+        "previous_raw_value": 4.0,
+        "raw_value": 2.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788767184,
+        "previous_clock": 1788767004,
+        "previous_raw_value": 5.0,
+        "raw_value": 0.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788767544,
+        "previous_clock": 1788767364,
+        "previous_raw_value": 5.0,
+        "raw_value": 2.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788767724,
+        "previous_clock": 1788767544,
+        "previous_raw_value": 2.0,
+        "raw_value": 1.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788768264,
+        "previous_clock": 1788768084,
+        "previous_raw_value": 6.0,
+        "raw_value": 2.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788768444,
+        "previous_clock": 1788768264,
+        "previous_raw_value": 2.0,
+        "raw_value": 0.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788768984,
+        "previous_clock": 1788768804,
+        "previous_raw_value": 14.0,
+        "raw_value": 10.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788769164,
+        "previous_clock": 1788768984,
+        "previous_raw_value": 10.0,
+        "raw_value": 2.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788769344,
+        "previous_clock": 1788769164,
+        "previous_raw_value": 2.0,
+        "raw_value": 0.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73452",
+        "clock": 1788769884,
+        "previous_clock": 1788769704,
+        "previous_raw_value": 4.0,
+        "raw_value": 2.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788767544,
+        "previous_clock": 1788767364,
+        "previous_raw_value": 2.0,
+        "raw_value": 1.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788768444,
+        "previous_clock": 1788768264,
+        "previous_raw_value": 3.0,
+        "raw_value": 2.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788768624,
+        "previous_clock": 1788768444,
+        "previous_raw_value": 2.0,
+        "raw_value": 1.0,
+        "delta_value": -1.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788769164,
+        "previous_clock": 1788768984,
+        "previous_raw_value": 3.0,
+        "raw_value": 1.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788769524,
+        "previous_clock": 1788769344,
+        "previous_raw_value": 5.0,
+        "raw_value": 3.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73454",
+        "clock": 1788769704,
+        "previous_clock": 1788769524,
+        "previous_raw_value": 3.0,
+        "raw_value": 1.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788767184,
+        "previous_clock": 1788767004,
+        "previous_raw_value": 3.0,
+        "raw_value": 1.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788767544,
+        "previous_clock": 1788767364,
+        "previous_raw_value": 4.0,
+        "raw_value": 1.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788768804,
+        "previous_clock": 1788768624,
+        "previous_raw_value": 3.0,
+        "raw_value": 0.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788769164,
+        "previous_clock": 1788768984,
+        "previous_raw_value": 2.0,
+        "raw_value": 0.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788769524,
+        "previous_clock": 1788769344,
+        "previous_raw_value": 6.0,
+        "raw_value": 3.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "73455",
+        "clock": 1788769884,
+        "previous_clock": 1788769704,
+        "previous_raw_value": 3.0,
+        "raw_value": 0.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 211.0,
+        "raw_value": 209.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 209.0,
+        "raw_value": 201.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 213.0,
+        "raw_value": 208.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 208.0,
+        "raw_value": 202.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 202.0,
+        "raw_value": 198.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 215.0,
+        "raw_value": 204.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 204.0,
+        "raw_value": 202.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 202.0,
+        "raw_value": 186.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 186.0,
+        "raw_value": 178.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77520",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 201.0,
+        "raw_value": 185.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 202.0,
+        "raw_value": 197.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 197.0,
+        "raw_value": 194.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 205.0,
+        "raw_value": 199.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 199.0,
+        "raw_value": 193.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 193.0,
+        "raw_value": 189.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 206.0,
+        "raw_value": 195.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 195.0,
+        "raw_value": 193.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 193.0,
+        "raw_value": 177.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 177.0,
+        "raw_value": 169.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77521",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 192.0,
+        "raw_value": 176.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 226.0,
+        "raw_value": 216.0,
+        "delta_value": -10.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 216.0,
+        "raw_value": 210.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 223.0,
+        "raw_value": 219.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 219.0,
+        "raw_value": 211.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 211.0,
+        "raw_value": 209.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 228.0,
+        "raw_value": 214.0,
+        "delta_value": -14.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 214.0,
+        "raw_value": 211.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 214.0,
+        "raw_value": 197.0,
+        "delta_value": -17.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 197.0,
+        "raw_value": 185.0,
+        "delta_value": -12.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77522",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 210.0,
+        "raw_value": 195.0,
+        "delta_value": -15.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 202.0,
+        "raw_value": 200.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 200.0,
+        "raw_value": 192.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 205.0,
+        "raw_value": 199.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 199.0,
+        "raw_value": 193.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 193.0,
+        "raw_value": 189.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 206.0,
+        "raw_value": 195.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 195.0,
+        "raw_value": 193.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 193.0,
+        "raw_value": 178.0,
+        "delta_value": -15.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 178.0,
+        "raw_value": 169.0,
+        "delta_value": -9.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77523",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 192.0,
+        "raw_value": 176.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 202.0,
+        "raw_value": 197.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 197.0,
+        "raw_value": 194.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 204.0,
+        "raw_value": 199.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 199.0,
+        "raw_value": 193.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 193.0,
+        "raw_value": 189.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 206.0,
+        "raw_value": 195.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 195.0,
+        "raw_value": 193.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 193.0,
+        "raw_value": 178.0,
+        "delta_value": -15.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 178.0,
+        "raw_value": 169.0,
+        "delta_value": -9.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77524",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 192.0,
+        "raw_value": 176.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 200.0,
+        "raw_value": 197.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 197.0,
+        "raw_value": 194.0,
+        "delta_value": -3.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 204.0,
+        "raw_value": 199.0,
+        "delta_value": -5.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 199.0,
+        "raw_value": 193.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 193.0,
+        "raw_value": 189.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 206.0,
+        "raw_value": 195.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 195.0,
+        "raw_value": 193.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 193.0,
+        "raw_value": 177.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788769410,
+        "previous_clock": 1788769230,
+        "previous_raw_value": 177.0,
+        "raw_value": 169.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77525",
+        "clock": 1788769950,
+        "previous_clock": 1788769770,
+        "previous_raw_value": 192.0,
+        "raw_value": 176.0,
+        "delta_value": -16.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788767250,
+        "previous_clock": 1788767070,
+        "previous_raw_value": 202.0,
+        "raw_value": 200.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788767430,
+        "previous_clock": 1788767250,
+        "previous_raw_value": 200.0,
+        "raw_value": 192.0,
+        "delta_value": -8.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788767970,
+        "previous_clock": 1788767790,
+        "previous_raw_value": 205.0,
+        "raw_value": 199.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788768150,
+        "previous_clock": 1788767970,
+        "previous_raw_value": 199.0,
+        "raw_value": 193.0,
+        "delta_value": -6.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788768330,
+        "previous_clock": 1788768150,
+        "previous_raw_value": 193.0,
+        "raw_value": 189.0,
+        "delta_value": -4.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788768690,
+        "previous_clock": 1788768510,
+        "previous_raw_value": 206.0,
+        "raw_value": 195.0,
+        "delta_value": -11.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788768870,
+        "previous_clock": 1788768690,
+        "previous_raw_value": 195.0,
+        "raw_value": 193.0,
+        "delta_value": -2.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      },
+      {
+        "itemid": "77526",
+        "clock": 1788769230,
+        "previous_clock": 1788769050,
+        "previous_raw_value": 193.0,
+        "raw_value": 178.0,
+        "delta_value": -15.0,
+        "value": null,
+        "counter_reset": true,
+        "canonical_metric": "out_discard_rate"
+      }
+    ],
+    "duplicate_timestamps": [],
+    "out_of_order": [],
+    "invalid_delta_time": [],
+    "negative_rates": [],
+    "non_finite_values": [],
+    "raw_value_mismatches": [],
+    "missing_fields": []
+  },
+  "validation": {
+    "passed": false,
+    "total_issues": 231
+  }
+}

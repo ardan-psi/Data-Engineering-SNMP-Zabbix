@@ -1,0 +1,207 @@
+{
+  "entity_type": "interface",
+  "split": "train",
+  "row_count": 37494,
+  "source_row_count": 46868,
+  "features": [
+    "discard_total_rate_15m",
+    "discard_total_rate_5m",
+    "discard_total_rate_behavior_5m_change",
+    "error_total_rate_15m",
+    "error_total_rate_5m",
+    "error_total_rate_behavior_5m_change",
+    "in_bps_15m_mean",
+    "in_bps_5m_mean",
+    "in_bps_behavior_5m_change",
+    "in_discard_rate_15m_mean",
+    "in_discard_rate_5m_mean",
+    "in_error_rate_15m_mean",
+    "in_error_rate_5m_mean",
+    "oper_status_last",
+    "out_bps_15m_mean",
+    "out_bps_5m_mean",
+    "out_bps_behavior_5m_change",
+    "out_discard_rate_15m_mean",
+    "out_discard_rate_5m_mean",
+    "out_error_rate_15m_mean",
+    "out_error_rate_5m_mean",
+    "traffic_total_bps_15m",
+    "traffic_total_bps_5m",
+    "traffic_total_bps_behavior_5m_change",
+    "traffic_variability_5m"
+  ],
+  "feature_count": 25,
+  "timestamp_range": {
+    "min": 1788766860,
+    "max": 1788769440
+  },
+  "imputation": {
+    "method": "median",
+    "medians": {
+      "discard_total_rate_15m": 0.0,
+      "discard_total_rate_5m": 0.0,
+      "discard_total_rate_behavior_5m_change": 0.0,
+      "error_total_rate_15m": 0.0,
+      "error_total_rate_5m": 0.0,
+      "error_total_rate_behavior_5m_change": 0.0,
+      "in_bps_15m_mean": 137.6,
+      "in_bps_5m_mean": 132.0,
+      "in_bps_behavior_5m_change": 0.0,
+      "in_discard_rate_15m_mean": 0.0,
+      "in_discard_rate_5m_mean": 0.0,
+      "in_error_rate_15m_mean": 0.0,
+      "in_error_rate_5m_mean": 0.0,
+      "oper_status_last": 1.0,
+      "out_bps_15m_mean": 714.4000000000001,
+      "out_bps_5m_mean": 672.0,
+      "out_bps_behavior_5m_change": 0.0,
+      "out_discard_rate_15m_mean": 0.0,
+      "out_discard_rate_5m_mean": 0.0,
+      "out_error_rate_15m_mean": 0.0,
+      "out_error_rate_5m_mean": 0.0,
+      "traffic_total_bps_15m": 956.0,
+      "traffic_total_bps_5m": 952.0,
+      "traffic_total_bps_behavior_5m_change": 0.0,
+      "traffic_variability_5m": 0.0
+    }
+  },
+  "scaling": {
+    "method": "zscore",
+    "parameters": {
+      "discard_total_rate_15m": {
+        "mean": 0.0008887206708843679,
+        "std": 0.006866157580457968
+      },
+      "discard_total_rate_5m": {
+        "mean": 0.000544318975093986,
+        "std": 0.00566997436271272
+      },
+      "discard_total_rate_behavior_5m_change": {
+        "mean": 7.2373898664366e-05,
+        "std": 0.003197944010677317
+      },
+      "error_total_rate_15m": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "error_total_rate_5m": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "error_total_rate_behavior_5m_change": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "in_bps_15m_mean": {
+        "mean": 3072493.277571132,
+        "std": 15202523.615592973
+      },
+      "in_bps_5m_mean": {
+        "mean": 2943603.4416173254,
+        "std": 14524850.074027792
+      },
+      "in_bps_behavior_5m_change": {
+        "mean": -111659.43961878345,
+        "std": 3779599.181731585
+      },
+      "in_discard_rate_15m_mean": {
+        "mean": 2.2122058047806168e-05,
+        "std": 0.0004251867687870356
+      },
+      "in_discard_rate_5m_mean": {
+        "mean": 1.8373310099986368e-05,
+        "std": 0.00046048027236123446
+      },
+      "in_error_rate_15m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "in_error_rate_5m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "oper_status_last": {
+        "mean": 1.258788072758308,
+        "std": 0.4464131132492182
+      },
+      "out_bps_15m_mean": {
+        "mean": 3168612.6644607615,
+        "std": 15088079.707867855
+      },
+      "out_bps_5m_mean": {
+        "mean": 3036069.3923934493,
+        "std": 14449718.01984559
+      },
+      "out_bps_behavior_5m_change": {
+        "mean": -117036.42450525417,
+        "std": 3683301.0033583133
+      },
+      "out_discard_rate_15m_mean": {
+        "mean": 0.0008665986128365616,
+        "std": 0.006853237018729682
+      },
+      "out_discard_rate_5m_mean": {
+        "mean": 0.0005274273835504502,
+        "std": 0.0056516512882676334
+      },
+      "out_error_rate_15m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "out_error_rate_5m_mean": {
+        "mean": 0.0,
+        "std": 1.0
+      },
+      "traffic_total_bps_15m": {
+        "mean": 6241105.942031894,
+        "std": 27052667.986414302
+      },
+      "traffic_total_bps_5m": {
+        "mean": 5978886.947735637,
+        "std": 25891835.974545915
+      },
+      "traffic_total_bps_behavior_5m_change": {
+        "mean": -228793.0434060561,
+        "std": 6300150.611956169
+      },
+      "traffic_variability_5m": {
+        "mean": 567097.3730027387,
+        "std": 2859037.4234561543
+      }
+    }
+  },
+  "excluded_fields": [
+    "@timestamp",
+    "baseline_metric_coverage_ratio_5m",
+    "counter_reset_count_15m",
+    "counter_reset_count_5m",
+    "counter_reset_flag_15m",
+    "counter_reset_flag_5m",
+    "counter_reset_raw_context_sum_15m",
+    "counter_reset_raw_context_sum_5m",
+    "device_role",
+    "entity_type",
+    "feature_row_id",
+    "host",
+    "host_name",
+    "hostid",
+    "ifindex",
+    "metric_coverage_ratio_15m",
+    "metric_coverage_ratio_5m",
+    "metric_expected_count_15m",
+    "metric_expected_count_5m",
+    "metric_missing_count_15m",
+    "metric_missing_count_5m",
+    "metric_presence_count_15m",
+    "metric_presence_count_5m",
+    "ml_eligible",
+    "oper_status_change_count_15m",
+    "oper_status_change_count_5m",
+    "oper_status_change_flag_15m",
+    "oper_status_change_flag_5m",
+    "timestamp",
+    "training_eligible",
+    "uptime_reset_flag_15m",
+    "uptime_reset_flag_5m"
+  ]
+}

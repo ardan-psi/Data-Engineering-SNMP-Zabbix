@@ -1,0 +1,637 @@
+{
+  "version": "1.1",
+  "description": "AI-NOC network device scope",
+  "source": "zabbix_inventory.json",
+  "generated_at": "2026-09-07T07:58:06.567138+00:00",
+  "policy": {
+    "default_action": "exclude",
+    "identity": "hostid",
+    "one_host_one_role": true,
+    "automatic_role_detection": false
+  },
+  "include": {
+    "switch": [
+      {
+        "hostid": "10670",
+        "host": "ICX DEV 02",
+        "name": "ICX DEV 02"
+      },
+      {
+        "hostid": "10671",
+        "host": "ICX DEV 03",
+        "name": "ICX DEV 03"
+      },
+      {
+        "hostid": "10672",
+        "host": "ICX 6430 LT9",
+        "name": "ICX 6430 LT9"
+      },
+      {
+        "hostid": "10673",
+        "host": "ICX 6430 LT8",
+        "name": "ICX 6430 LT8"
+      },
+      {
+        "hostid": "10674",
+        "host": "ICX 6430 LT7",
+        "name": "ICX 6430 LT7"
+      },
+      {
+        "hostid": "10675",
+        "host": "ICX 6430 LT6",
+        "name": "ICX 6430 LT6"
+      },
+      {
+        "hostid": "10676",
+        "host": "ICX 6430 LT5",
+        "name": "ICX 6430 LT5"
+      },
+      {
+        "hostid": "10677",
+        "host": "ICX 6430 LT3",
+        "name": "ICX 6430 LT3"
+      },
+      {
+        "hostid": "10678",
+        "host": "ICX 6430 LT2",
+        "name": "ICX 6430 LT2"
+      },
+      {
+        "hostid": "10706",
+        "host": "Mikrotik Exxadata",
+        "name": "Mikrotik Exxadata"
+      },
+      {
+        "hostid": "10708",
+        "host": "ICT-DEV-01-ICX7400",
+        "name": "ICT-DEV-01-ICX7400"
+      },
+      {
+        "hostid": "10709",
+        "host": "ICT-DEV-02-ICX6430",
+        "name": "ICT-DEV-02-ICX6430"
+      },
+      {
+        "hostid": "10710",
+        "host": "ICT-DEV-03-ICX6430",
+        "name": "ICT-DEV-03-ICX6430"
+      },
+      {
+        "hostid": "10711",
+        "host": "ICT-DEV-03-VDX6740-2",
+        "name": "ICT-DEV-03-VDX6740-2"
+      },
+      {
+        "hostid": "10713",
+        "host": "ICX-DC-DMZ",
+        "name": "ICX-DC-DMZ"
+      },
+      {
+        "hostid": "10714",
+        "host": "ICX-Sardina-7450",
+        "name": "ICX-Sardina-7450"
+      },
+      {
+        "hostid": "10725",
+        "host": "10.0.0.50",
+        "name": "Nexus-Sardina-R02"
+      },
+      {
+        "hostid": "10767",
+        "host": "10.0.0.3",
+        "name": "SW-CES-DC-01"
+      },
+      {
+        "hostid": "10768",
+        "host": "10.0.0.30",
+        "name": "OPENSTACK-CORE-01"
+      },
+      {
+        "hostid": "10769",
+        "host": "10.0.0.31",
+        "name": "OPENSTACK-CORE-02"
+      },
+      {
+        "hostid": "10770",
+        "host": "10.0.0.51",
+        "name": "SW-ICX-DC-02"
+      },
+      {
+        "hostid": "10778",
+        "host": "SW-ISP-GICT",
+        "name": "SW-ISP-GICT"
+      },
+      {
+        "hostid": "10779",
+        "host": "10.0.0.5",
+        "name": "SW-VDX-DC-01"
+      },
+      {
+        "hostid": "10780",
+        "host": "10.0.0.6",
+        "name": "SW-VDX-DC-02"
+      },
+      {
+        "hostid": "10785",
+        "host": "X460G2-24p-10G4",
+        "name": "X460G2-24p-10G4"
+      }
+    ],
+    "router": [
+      {
+        "hostid": "10720",
+        "host": "Mikrotik-11",
+        "name": "Mikrotik-11"
+      },
+      {
+        "hostid": "10721",
+        "host": "Mikrotik-12",
+        "name": "Mikrotik-12"
+      }
+    ],
+    "firewall": [
+      {
+        "hostid": "10707",
+        "host": "Fortigate-60F",
+        "name": "Fortigate-60F"
+      },
+      {
+        "hostid": "10730",
+        "host": "pfsense",
+        "name": "pfsense"
+      },
+      {
+        "hostid": "10808",
+        "host": "FW-RUIJIE",
+        "name": "FW-RUIJIE"
+      }
+    ],
+    "access_point": [
+      {
+        "hostid": "10688",
+        "host": "10.77.7.32",
+        "name": "AP-RU-L01-02"
+      },
+      {
+        "hostid": "10689",
+        "host": "10.77.7.38",
+        "name": "AP-RU-L03-02"
+      },
+      {
+        "hostid": "10690",
+        "host": "10.77.7.61",
+        "name": "AP-RU-L03-04"
+      },
+      {
+        "hostid": "10691",
+        "host": "10.77.7.62",
+        "name": "AP-RU-L03-06"
+      },
+      {
+        "hostid": "10692",
+        "host": "10.77.7.67",
+        "name": "AP-RU-L05-02"
+      },
+      {
+        "hostid": "10693",
+        "host": "10.77.7.63",
+        "name": "AP-RU-L05-04"
+      },
+      {
+        "hostid": "10694",
+        "host": "10.77.7.53",
+        "name": "AP-RU-L05-06"
+      },
+      {
+        "hostid": "10695",
+        "host": "10.77.7.45",
+        "name": "AP-RU-L06-01"
+      },
+      {
+        "hostid": "10696",
+        "host": "10.77.7.10",
+        "name": "AP-RU-L06-04"
+      },
+      {
+        "hostid": "10697",
+        "host": "10.77.7.27",
+        "name": "AP-RU-L06-06"
+      },
+      {
+        "hostid": "10698",
+        "host": "10.77.7.47",
+        "name": "AP-RU-L07-02"
+      },
+      {
+        "hostid": "10699",
+        "host": "10.77.7.46",
+        "name": "AP-RU-L07-04"
+      },
+      {
+        "hostid": "10700",
+        "host": "10.77.7.51",
+        "name": "AP-RU-L07-06"
+      },
+      {
+        "hostid": "10701",
+        "host": "10.77.7.34",
+        "name": "AP-RU-L08-02"
+      },
+      {
+        "hostid": "10702",
+        "host": "10.77.7.35",
+        "name": "AP-RU-L08-04"
+      },
+      {
+        "hostid": "10703",
+        "host": "10.77.7.37",
+        "name": "AP-RU-L08-06"
+      },
+      {
+        "hostid": "10704",
+        "host": "10.77.7.52",
+        "name": "AP-RU-L10-01"
+      },
+      {
+        "hostid": "10705",
+        "host": "10.77.7.33",
+        "name": "AP-RU-L10-02"
+      },
+      {
+        "hostid": "10788",
+        "host": "10.77.7.36",
+        "name": "AP-RU-L01-01"
+      },
+      {
+        "hostid": "10789",
+        "host": "10.77.7.150",
+        "name": "AP-RU-L02-01"
+      },
+      {
+        "hostid": "10790",
+        "host": "10.77.7.83",
+        "name": "AP-RU-L02-02"
+      },
+      {
+        "hostid": "10791",
+        "host": "10.77.7.22",
+        "name": "AP-RU-L02-03"
+      },
+      {
+        "hostid": "10792",
+        "host": "10.77.7.137",
+        "name": "AP-RU-L02-04"
+      },
+      {
+        "hostid": "10793",
+        "host": "10.77.7.103",
+        "name": "AP-RU-L02-05"
+      }
+    ]
+  },
+  "exclude_hostids": [
+    "10084",
+    "10712",
+    "10715",
+    "10716",
+    "10717",
+    "10718",
+    "10719",
+    "10722",
+    "10723",
+    "10724",
+    "10729",
+    "10743",
+    "10744",
+    "10745",
+    "10746",
+    "10747",
+    "10748",
+    "10749",
+    "10750",
+    "10751",
+    "10752",
+    "10753",
+    "10754",
+    "10755",
+    "10756",
+    "10757",
+    "10758",
+    "10759",
+    "10760",
+    "10761",
+    "10762",
+    "10763",
+    "10764",
+    "10765",
+    "10766",
+    "10781",
+    "10782",
+    "10783",
+    "10784",
+    "10794",
+    "10795",
+    "10796",
+    "10797",
+    "10798",
+    "10799",
+    "10800",
+    "10801",
+    "10802",
+    "10803",
+    "10804",
+    "10805",
+    "10806",
+    "10807",
+    "10809",
+    "10810"
+  ],
+  "exclude": [
+    {
+      "hostid": "10084",
+      "host": "Zabbix server",
+      "name": "Zabbix server"
+    },
+    {
+      "hostid": "10712",
+      "host": "ICT-DEV-05",
+      "name": "ICT-DEV-05"
+    },
+    {
+      "hostid": "10715",
+      "host": "1.1.1.3",
+      "name": "Internet - 1.1.1.3 via CBN"
+    },
+    {
+      "hostid": "10716",
+      "host": "1.1.1.4",
+      "name": "Internet - 1.1.1.4 via DEFAST"
+    },
+    {
+      "hostid": "10717",
+      "host": "1.1.1.1",
+      "name": "Internet - 1.1.1.1 via IFORTE"
+    },
+    {
+      "hostid": "10718",
+      "host": "1.1.1.2",
+      "name": "Internet - 1.1.1.2 via OXYGEN"
+    },
+    {
+      "hostid": "10719",
+      "host": "149.129.222.77",
+      "name": "Public Jasnita"
+    },
+    {
+      "hostid": "10722",
+      "host": "192.168.6.101",
+      "name": "MKS-Proxmox02"
+    },
+    {
+      "hostid": "10723",
+      "host": "192.168.6.102",
+      "name": "MKS-Proxmox03"
+    },
+    {
+      "hostid": "10724",
+      "host": "192.168.6.103",
+      "name": "MKS-Proxmox04"
+    },
+    {
+      "hostid": "10729",
+      "host": "10.0.0.11",
+      "name": "PBX01"
+    },
+    {
+      "hostid": "10743",
+      "host": "10.1.20.50",
+      "name": "SAR-CEPH-S.1"
+    },
+    {
+      "hostid": "10744",
+      "host": "10.1.20.51",
+      "name": "SAR-CEPH-S.2"
+    },
+    {
+      "hostid": "10745",
+      "host": "10.1.20.52",
+      "name": "SAR-CEPH-S.3"
+    },
+    {
+      "hostid": "10746",
+      "host": "10.1.20.21",
+      "name": "Sar-Chep1-Node1"
+    },
+    {
+      "hostid": "10747",
+      "host": "10.1.20.22",
+      "name": "Sar-Chep1-Node2"
+    },
+    {
+      "hostid": "10748",
+      "host": "10.1.20.23",
+      "name": "Sar-Chep1-Node3"
+    },
+    {
+      "hostid": "10749",
+      "host": "10.1.20.57",
+      "name": "SAR-CMP-1-S.9"
+    },
+    {
+      "hostid": "10750",
+      "host": "10.1.20.56",
+      "name": "SAR-CMP-2-S.10"
+    },
+    {
+      "hostid": "10751",
+      "host": "10.1.20.55",
+      "name": "SAR-CMP-3-S.11"
+    },
+    {
+      "hostid": "10752",
+      "host": "10.1.20.60",
+      "name": "SAR-CTRL-1-S.6"
+    },
+    {
+      "hostid": "10753",
+      "host": "10.1.20.59",
+      "name": "SAR-CTRL-2-S.7"
+    },
+    {
+      "hostid": "10754",
+      "host": "10.1.20.58",
+      "name": "SAR-CTRL-3-S.8"
+    },
+    {
+      "hostid": "10755",
+      "host": "10.1.20.54",
+      "name": "SAR-DEV-S.5"
+    },
+    {
+      "hostid": "10756",
+      "host": "10.1.20.53",
+      "name": "SAR-LB-S.4"
+    },
+    {
+      "hostid": "10757",
+      "host": "10.1.20.11",
+      "name": "Svr-gict-01-Ctrl-1"
+    },
+    {
+      "hostid": "10758",
+      "host": "10.1.20.12",
+      "name": "Svr-gict-02-Ctrl-2"
+    },
+    {
+      "hostid": "10759",
+      "host": "10.1.20.13",
+      "name": "Svr-gict-03-Ctrl-3"
+    },
+    {
+      "hostid": "10760",
+      "host": "10.1.20.14",
+      "name": "Svr-gict-04-Cmpt-1"
+    },
+    {
+      "hostid": "10761",
+      "host": "10.1.20.15",
+      "name": "Svr-gict-05-Cmpt-2"
+    },
+    {
+      "hostid": "10762",
+      "host": "10.1.20.16",
+      "name": "Svr-gict-06-Cmpt-3"
+    },
+    {
+      "hostid": "10763",
+      "host": "10.1.20.24",
+      "name": "Svr-gict-06-Cmpt-4"
+    },
+    {
+      "hostid": "10764",
+      "host": "10.1.20.25",
+      "name": "Svr-gict-06-Cmpt-5"
+    },
+    {
+      "hostid": "10765",
+      "host": "10.1.20.26",
+      "name": "Svr-gict-06-Cmpt-6"
+    },
+    {
+      "hostid": "10766",
+      "host": "10.1.20.1",
+      "name": "Svr-gict-07-backup"
+    },
+    {
+      "hostid": "10781",
+      "host": "103.86.159.113",
+      "name": "ISP-GW - CBN"
+    },
+    {
+      "hostid": "10782",
+      "host": "103.76.178.33",
+      "name": "ISP-GW - Defast"
+    },
+    {
+      "hostid": "10783",
+      "host": "100.70.9.101",
+      "name": "ISP-GW - IForte"
+    },
+    {
+      "hostid": "10784",
+      "host": "103.154.93.225",
+      "name": "ISP-GW - Oxygen"
+    },
+    {
+      "hostid": "10794",
+      "host": "10.5.20.11",
+      "name": "Reg.01-OpenStck-01"
+    },
+    {
+      "hostid": "10795",
+      "host": "10.5.20.12",
+      "name": "Reg.01-OpenStck-02"
+    },
+    {
+      "hostid": "10796",
+      "host": "10.5.20.13",
+      "name": "Reg.01-OpenStck-03"
+    },
+    {
+      "hostid": "10797",
+      "host": "10.5.20.31",
+      "name": "Reg.01-OpenStck-04"
+    },
+    {
+      "hostid": "10798",
+      "host": "10.5.20.32",
+      "name": "Reg.02-OpenStck-05"
+    },
+    {
+      "hostid": "10799",
+      "host": "10.5.20.33",
+      "name": "Reg.02-OpenStck-06"
+    },
+    {
+      "hostid": "10800",
+      "host": "10.5.20.34",
+      "name": "Reg.02-OpenStck-07"
+    },
+    {
+      "hostid": "10801",
+      "host": "10.5.20.35",
+      "name": "Reg.02-OpenStck-08"
+    },
+    {
+      "hostid": "10802",
+      "host": "10.5.20.36",
+      "name": "Reg.03-OpenStck-09"
+    },
+    {
+      "hostid": "10803",
+      "host": "10.5.20.37",
+      "name": "Reg.03-OpenStck-10"
+    },
+    {
+      "hostid": "10804",
+      "host": "10.5.20.38",
+      "name": "Reg.03-OpenStck-11"
+    },
+    {
+      "hostid": "10805",
+      "host": "10.5.20.39",
+      "name": "Reg.03-OpenStck-12"
+    },
+    {
+      "hostid": "10806",
+      "host": "10.0.0.48",
+      "name": "DNS 48"
+    },
+    {
+      "hostid": "10807",
+      "host": "10.0.0.49",
+      "name": "DNS 49"
+    },
+    {
+      "hostid": "10809",
+      "host": "10.0.31.253",
+      "name": "server-probe-lt3"
+    },
+    {
+      "hostid": "10810",
+      "host": "103.76.178.38",
+      "name": "ISP-Defast-ICT"
+    }
+  ],
+  "missing_from_inventory": [],
+  "summary": {
+    "inventory_hosts": 109,
+    "included_hosts": 54,
+    "excluded_hosts": 55,
+    "switch": 25,
+    "router": 2,
+    "firewall": 3,
+    "access_point": 24,
+    "missing_from_inventory": 0
+  }
+}

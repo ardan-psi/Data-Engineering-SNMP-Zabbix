@@ -1,0 +1,2936 @@
+{
+  "builder": {
+    "script": "ml_dataset_builder.py",
+    "version": "1.0"
+  },
+  "configuration": {
+    "recent_coverage_min": 0.8,
+    "baseline_coverage_min": 0.8,
+    "inference_fraction": 0.2,
+    "min_feature_presence": 0.8
+  },
+  "interface": {
+    "input_file": "interface_features.jsonl",
+    "entity_type": "interface",
+    "source_rows": 52137,
+    "eligible_rows": 46868,
+    "excluded_rows": 5269,
+    "parse_errors": 0,
+    "training_rows": 37494,
+    "inference_rows": 9374,
+    "feature_count": 25,
+    "features": [
+      "discard_total_rate_15m",
+      "discard_total_rate_5m",
+      "discard_total_rate_behavior_5m_change",
+      "error_total_rate_15m",
+      "error_total_rate_5m",
+      "error_total_rate_behavior_5m_change",
+      "in_bps_15m_mean",
+      "in_bps_5m_mean",
+      "in_bps_behavior_5m_change",
+      "in_discard_rate_15m_mean",
+      "in_discard_rate_5m_mean",
+      "in_error_rate_15m_mean",
+      "in_error_rate_5m_mean",
+      "oper_status_last",
+      "out_bps_15m_mean",
+      "out_bps_5m_mean",
+      "out_bps_behavior_5m_change",
+      "out_discard_rate_15m_mean",
+      "out_discard_rate_5m_mean",
+      "out_error_rate_15m_mean",
+      "out_error_rate_5m_mean",
+      "traffic_total_bps_15m",
+      "traffic_total_bps_5m",
+      "traffic_total_bps_behavior_5m_change",
+      "traffic_variability_5m"
+    ],
+    "quality_gate": {
+      "recent_coverage_min": 0.8,
+      "baseline_coverage_min": 0.8,
+      "excluded_reason_counts": {
+        "recent_coverage_below_threshold": 846,
+        "baseline_coverage_below_threshold": 5261,
+        "no_previous_window_baseline": 4415
+      }
+    },
+    "feature_selection": {
+      "entity_type": "interface",
+      "rows": 46868,
+      "candidate_numeric_features": 262,
+      "selected_features": 25,
+      "min_presence": 0.8,
+      "missing_contract_features": [
+        "cpu_pct_15m_mean",
+        "cpu_pct_5m_mean",
+        "discard_total_rate_max",
+        "discard_total_rate_sum",
+        "error_total_rate_behavior_5m_change_pct",
+        "error_total_rate_behavior_5m_recent_to_baseline_ratio",
+        "error_total_rate_max",
+        "error_total_rate_sum",
+        "icmp_loss_pct_15m_mean",
+        "icmp_loss_pct_5m_mean",
+        "icmp_rtt_sec_15m_mean",
+        "icmp_rtt_sec_5m_mean",
+        "in_out_pps_ratio_15m",
+        "in_out_pps_ratio_5m",
+        "in_pps_15m_mean",
+        "in_pps_5m_mean",
+        "in_pps_behavior_5m_change",
+        "in_pps_behavior_5m_change_pct",
+        "in_pps_behavior_5m_recent_to_baseline_ratio",
+        "interface_count",
+        "interfaces_with_counter_reset",
+        "interfaces_with_oper_down",
+        "memory_pct_15m_mean",
+        "memory_pct_5m_mean",
+        "out_pps_15m_mean",
+        "out_pps_5m_mean",
+        "out_pps_behavior_5m_change",
+        "out_pps_behavior_5m_change_pct",
+        "out_pps_behavior_5m_recent_to_baseline_ratio",
+        "packet_total_pps_15m",
+        "packet_total_pps_5m",
+        "packet_total_pps_behavior_5m_change",
+        "packet_total_pps_behavior_5m_change_pct",
+        "packet_total_pps_behavior_5m_recent_to_baseline_ratio",
+        "packet_total_pps_max",
+        "packet_total_pps_mean",
+        "packet_total_pps_sum",
+        "temperature_c_15m_mean",
+        "temperature_c_5m_mean",
+        "traffic_total_bps_max",
+        "traffic_total_bps_mean",
+        "traffic_total_bps_sum",
+        "uptime_growth_sec_15m",
+        "uptime_growth_sec_5m"
+      ],
+      "excluded_feature_count": 43,
+      "presence": {
+        "baseline_metric_coverage_ratio_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_expected_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_expected_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_missing_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_missing_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_presence_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "baseline_metric_presence_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "discard_total_rate_15m": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "discard_total_rate_5m": {
+          "count": 46466,
+          "ratio": 0.9914227191260562
+        },
+        "discard_total_rate_baseline_mean_15m": {
+          "count": 35401,
+          "ratio": 0.7553341298967312
+        },
+        "discard_total_rate_baseline_mean_5m": {
+          "count": 43844,
+          "ratio": 0.9354783647691388
+        },
+        "discard_total_rate_behavior_15m_change": {
+          "count": 35401,
+          "ratio": 0.7553341298967312
+        },
+        "discard_total_rate_behavior_15m_change_pct": {
+          "count": 1227,
+          "ratio": 0.02617990953315695
+        },
+        "discard_total_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "discard_total_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "discard_total_rate_behavior_15m_recent_to_baseline_ratio": {
+          "count": 1227,
+          "ratio": 0.02617990953315695
+        },
+        "discard_total_rate_behavior_5m_change": {
+          "count": 43485,
+          "ratio": 0.9278185542374328
+        },
+        "discard_total_rate_behavior_5m_change_pct": {
+          "count": 469,
+          "ratio": 0.010006827686267816
+        },
+        "discard_total_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "discard_total_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "discard_total_rate_behavior_5m_recent_to_baseline_ratio": {
+          "count": 469,
+          "ratio": 0.010006827686267816
+        },
+        "error_total_rate_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "error_total_rate_5m": {
+          "count": 46861,
+          "ratio": 0.9998506443628915
+        },
+        "error_total_rate_baseline_mean_15m": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "error_total_rate_baseline_mean_5m": {
+          "count": 44236,
+          "ratio": 0.9438422804472134
+        },
+        "error_total_rate_behavior_15m_change": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "error_total_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "error_total_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "error_total_rate_behavior_5m_change": {
+          "count": 44229,
+          "ratio": 0.943692924810105
+        },
+        "error_total_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "error_total_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_last": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_max": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_mean": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_min": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_range": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_15m_std": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_5m_last": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_5m_max": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_5m_mean": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_5m_min": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_5m_range": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_5m_std": {
+          "count": 46864,
+          "ratio": 0.9999146539216524
+        },
+        "in_bps_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_baseline_mean_15m": {
+          "count": 38294,
+          "ratio": 0.8170606810617053
+        },
+        "in_bps_baseline_mean_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "in_bps_baseline_std_15m": {
+          "count": 38294,
+          "ratio": 0.8170606810617053
+        },
+        "in_bps_baseline_std_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "in_bps_behavior_15m_change": {
+          "count": 38294,
+          "ratio": 0.8170606810617053
+        },
+        "in_bps_behavior_15m_change_pct": {
+          "count": 22016,
+          "ratio": 0.46974481522574035
+        },
+        "in_bps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_behavior_15m_recent_to_baseline_ratio": {
+          "count": 22016,
+          "ratio": 0.46974481522574035
+        },
+        "in_bps_behavior_5m_change": {
+          "count": 46858,
+          "ratio": 0.9997866348041308
+        },
+        "in_bps_behavior_5m_change_pct": {
+          "count": 26896,
+          "ratio": 0.5738670308099343
+        },
+        "in_bps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_bps_behavior_5m_recent_to_baseline_ratio": {
+          "count": 26896,
+          "ratio": 0.5738670308099343
+        },
+        "in_discard_rate_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_15m_last": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_15m_max": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_15m_mean": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_15m_min": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_15m_range": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_15m_std": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "in_discard_rate_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_5m_last": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_5m_max": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_5m_mean": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_5m_min": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_5m_range": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_5m_std": {
+          "count": 46824,
+          "ratio": 0.9990611931381753
+        },
+        "in_discard_rate_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_baseline_mean_15m": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "in_discard_rate_baseline_mean_5m": {
+          "count": 44195,
+          "ratio": 0.9429674831441496
+        },
+        "in_discard_rate_baseline_std_15m": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "in_discard_rate_baseline_std_5m": {
+          "count": 44195,
+          "ratio": 0.9429674831441496
+        },
+        "in_discard_rate_behavior_15m_change": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "in_discard_rate_behavior_15m_change_pct": {
+          "count": 140,
+          "ratio": 0.0029871127421694974
+        },
+        "in_discard_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_behavior_15m_recent_to_baseline_ratio": {
+          "count": 140,
+          "ratio": 0.0029871127421694974
+        },
+        "in_discard_rate_behavior_5m_change": {
+          "count": 44157,
+          "ratio": 0.9421566953998464
+        },
+        "in_discard_rate_behavior_5m_change_pct": {
+          "count": 82,
+          "ratio": 0.0017495946061278484
+        },
+        "in_discard_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_discard_rate_behavior_5m_recent_to_baseline_ratio": {
+          "count": 82,
+          "ratio": 0.0017495946061278484
+        },
+        "in_error_rate_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_last": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_max": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_mean": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_min": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_range": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_15m_std": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_5m_last": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_5m_max": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_5m_mean": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_5m_min": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_5m_range": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_5m_std": {
+          "count": 46867,
+          "ratio": 0.9999786634804131
+        },
+        "in_error_rate_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_baseline_mean_15m": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "in_error_rate_baseline_mean_5m": {
+          "count": 44242,
+          "ratio": 0.943970299564735
+        },
+        "in_error_rate_baseline_std_15m": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "in_error_rate_baseline_std_5m": {
+          "count": 44242,
+          "ratio": 0.943970299564735
+        },
+        "in_error_rate_behavior_15m_change": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "in_error_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_behavior_5m_change": {
+          "count": 44241,
+          "ratio": 0.9439489630451481
+        },
+        "in_error_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_error_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_out_bps_ratio_15m": {
+          "count": 28321,
+          "ratio": 0.6042715712213024
+        },
+        "in_out_bps_ratio_5m": {
+          "count": 28318,
+          "ratio": 0.6042075616625416
+        },
+        "in_pps_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "in_pps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "oper_status_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "oper_status_15m_last": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_15m_max": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_15m_mean": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_15m_min": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_15m_range": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_15m_std": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "oper_status_5m_last": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_max": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_mean": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_min": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_range": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_5m_std": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "oper_status_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "oper_status_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "oper_status_baseline_mean_15m": {
+          "count": 38830,
+          "ratio": 0.828497055560297
+        },
+        "oper_status_baseline_mean_5m": {
+          "count": 46819,
+          "ratio": 0.9989545105402406
+        },
+        "oper_status_baseline_std_15m": {
+          "count": 38830,
+          "ratio": 0.828497055560297
+        },
+        "oper_status_baseline_std_5m": {
+          "count": 46819,
+          "ratio": 0.9989545105402406
+        },
+        "oper_status_last": {
+          "count": 46820,
+          "ratio": 0.9989758470598276
+        },
+        "out_bps_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_last": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_max": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_mean": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_min": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_range": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_15m_std": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_5m_last": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_5m_max": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_5m_mean": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_5m_min": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_5m_range": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_5m_std": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_bps_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_baseline_mean_15m": {
+          "count": 38285,
+          "ratio": 0.8168686523854229
+        },
+        "out_bps_baseline_mean_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_bps_baseline_std_15m": {
+          "count": 38285,
+          "ratio": 0.8168686523854229
+        },
+        "out_bps_baseline_std_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_bps_behavior_15m_change": {
+          "count": 38285,
+          "ratio": 0.8168686523854229
+        },
+        "out_bps_behavior_15m_change_pct": {
+          "count": 23145,
+          "ratio": 0.49383374583937867
+        },
+        "out_bps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_behavior_15m_recent_to_baseline_ratio": {
+          "count": 23145,
+          "ratio": 0.49383374583937867
+        },
+        "out_bps_behavior_5m_change": {
+          "count": 46860,
+          "ratio": 0.9998293078433046
+        },
+        "out_bps_behavior_5m_change_pct": {
+          "count": 28318,
+          "ratio": 0.6042075616625416
+        },
+        "out_bps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_bps_behavior_5m_recent_to_baseline_ratio": {
+          "count": 28318,
+          "ratio": 0.6042075616625416
+        },
+        "out_discard_rate_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_15m_last": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_15m_max": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_15m_mean": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_15m_min": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_15m_range": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_15m_std": {
+          "count": 46866,
+          "ratio": 0.9999573269608262
+        },
+        "out_discard_rate_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_5m_last": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_5m_max": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_5m_mean": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_5m_min": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_5m_range": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_5m_std": {
+          "count": 46508,
+          "ratio": 0.992318852948707
+        },
+        "out_discard_rate_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_baseline_mean_15m": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "out_discard_rate_baseline_mean_5m": {
+          "count": 43890,
+          "ratio": 0.9364598446701374
+        },
+        "out_discard_rate_baseline_std_15m": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "out_discard_rate_baseline_std_5m": {
+          "count": 43890,
+          "ratio": 0.9364598446701374
+        },
+        "out_discard_rate_behavior_15m_change": {
+          "count": 35407,
+          "ratio": 0.7554621490142528
+        },
+        "out_discard_rate_behavior_15m_change_pct": {
+          "count": 1133,
+          "ratio": 0.024174276691986005
+        },
+        "out_discard_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_behavior_15m_recent_to_baseline_ratio": {
+          "count": 1133,
+          "ratio": 0.024174276691986005
+        },
+        "out_discard_rate_behavior_5m_change": {
+          "count": 43567,
+          "ratio": 0.9295681488435606
+        },
+        "out_discard_rate_behavior_5m_change_pct": {
+          "count": 407,
+          "ratio": 0.008683963471878468
+        },
+        "out_discard_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_discard_rate_behavior_5m_recent_to_baseline_ratio": {
+          "count": 407,
+          "ratio": 0.008683963471878468
+        },
+        "out_error_rate_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_last": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_max": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_mean": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_min": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_range": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_15m_std": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_5m_last": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_5m_max": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_5m_mean": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_5m_min": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_5m_range": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_5m_std": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "out_error_rate_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_baseline_mean_15m": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "out_error_rate_baseline_mean_5m": {
+          "count": 44237,
+          "ratio": 0.9438636169668003
+        },
+        "out_error_rate_baseline_std_15m": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "out_error_rate_baseline_std_5m": {
+          "count": 44237,
+          "ratio": 0.9438636169668003
+        },
+        "out_error_rate_behavior_15m_change": {
+          "count": 35413,
+          "ratio": 0.7555901681317744
+        },
+        "out_error_rate_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_behavior_5m_change": {
+          "count": 44231,
+          "ratio": 0.9437355978492789
+        },
+        "out_error_rate_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_error_rate_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_15m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_5m_count": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_baseline_count_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_baseline_count_5m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "out_pps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "packet_total_pps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "packet_total_pps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "packet_total_pps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "packet_total_pps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_cv_5m": {
+          "count": 28639,
+          "ratio": 0.6110565844499445
+        },
+        "traffic_total_bps_15m": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_total_bps_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        },
+        "traffic_total_bps_baseline_mean_15m": {
+          "count": 38282,
+          "ratio": 0.8168046428266621
+        },
+        "traffic_total_bps_baseline_mean_5m": {
+          "count": 46856,
+          "ratio": 0.999743961764957
+        },
+        "traffic_total_bps_behavior_15m_change": {
+          "count": 38282,
+          "ratio": 0.8168046428266621
+        },
+        "traffic_total_bps_behavior_15m_change_pct": {
+          "count": 23405,
+          "ratio": 0.49938124093197916
+        },
+        "traffic_total_bps_behavior_15m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_total_bps_behavior_15m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_total_bps_behavior_15m_recent_to_baseline_ratio": {
+          "count": 23405,
+          "ratio": 0.49938124093197916
+        },
+        "traffic_total_bps_behavior_5m_change": {
+          "count": 46850,
+          "ratio": 0.9996159426474354
+        },
+        "traffic_total_bps_behavior_5m_change_pct": {
+          "count": 28634,
+          "ratio": 0.6109499018520099
+        },
+        "traffic_total_bps_behavior_5m_decrease_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_total_bps_behavior_5m_increase_flag": {
+          "count": 46868,
+          "ratio": 1.0
+        },
+        "traffic_total_bps_behavior_5m_recent_to_baseline_ratio": {
+          "count": 28634,
+          "ratio": 0.6109499018520099
+        },
+        "traffic_variability_5m": {
+          "count": 46862,
+          "ratio": 0.9998719808824784
+        }
+      },
+      "excluded": {
+        "discard_total_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35401,
+          "presence_ratio": 0.7553341298967312
+        },
+        "discard_total_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35401,
+          "presence_ratio": 0.7553341298967312
+        },
+        "discard_total_rate_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 1227,
+          "presence_ratio": 0.02617990953315695
+        },
+        "discard_total_rate_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 1227,
+          "presence_ratio": 0.02617990953315695
+        },
+        "discard_total_rate_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 469,
+          "presence_ratio": 0.010006827686267816
+        },
+        "discard_total_rate_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 469,
+          "presence_ratio": 0.010006827686267816
+        },
+        "error_total_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "error_total_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "in_bps_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 22016,
+          "presence_ratio": 0.46974481522574035
+        },
+        "in_bps_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 22016,
+          "presence_ratio": 0.46974481522574035
+        },
+        "in_bps_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 26896,
+          "presence_ratio": 0.5738670308099343
+        },
+        "in_bps_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 26896,
+          "presence_ratio": 0.5738670308099343
+        },
+        "in_discard_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "in_discard_rate_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "in_discard_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "in_discard_rate_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 140,
+          "presence_ratio": 0.0029871127421694974
+        },
+        "in_discard_rate_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 140,
+          "presence_ratio": 0.0029871127421694974
+        },
+        "in_discard_rate_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 82,
+          "presence_ratio": 0.0017495946061278484
+        },
+        "in_discard_rate_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 82,
+          "presence_ratio": 0.0017495946061278484
+        },
+        "in_error_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "in_error_rate_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "in_error_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "in_out_bps_ratio_15m": {
+          "reason": "below_min_presence",
+          "presence": 28321,
+          "presence_ratio": 0.6042715712213024
+        },
+        "in_out_bps_ratio_5m": {
+          "reason": "below_min_presence",
+          "presence": 28318,
+          "presence_ratio": 0.6042075616625416
+        },
+        "out_bps_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 23145,
+          "presence_ratio": 0.49383374583937867
+        },
+        "out_bps_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 23145,
+          "presence_ratio": 0.49383374583937867
+        },
+        "out_bps_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 28318,
+          "presence_ratio": 0.6042075616625416
+        },
+        "out_bps_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 28318,
+          "presence_ratio": 0.6042075616625416
+        },
+        "out_discard_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "out_discard_rate_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "out_discard_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35407,
+          "presence_ratio": 0.7554621490142528
+        },
+        "out_discard_rate_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 1133,
+          "presence_ratio": 0.024174276691986005
+        },
+        "out_discard_rate_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 1133,
+          "presence_ratio": 0.024174276691986005
+        },
+        "out_discard_rate_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 407,
+          "presence_ratio": 0.008683963471878468
+        },
+        "out_discard_rate_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 407,
+          "presence_ratio": 0.008683963471878468
+        },
+        "out_error_rate_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "out_error_rate_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "out_error_rate_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 35413,
+          "presence_ratio": 0.7555901681317744
+        },
+        "traffic_cv_5m": {
+          "reason": "below_min_presence",
+          "presence": 28639,
+          "presence_ratio": 0.6110565844499445
+        },
+        "traffic_total_bps_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 23405,
+          "presence_ratio": 0.49938124093197916
+        },
+        "traffic_total_bps_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 23405,
+          "presence_ratio": 0.49938124093197916
+        },
+        "traffic_total_bps_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 28634,
+          "presence_ratio": 0.6109499018520099
+        },
+        "traffic_total_bps_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 28634,
+          "presence_ratio": 0.6109499018520099
+        }
+      }
+    },
+    "outputs": {
+      "train_csv": "ml_dataset/ml_interface_train.csv",
+      "inference_csv": "ml_dataset/ml_interface_inference.csv",
+      "train_meta": "ml_dataset/ml_interface_train_meta.json",
+      "inference_meta": "ml_dataset/ml_interface_inference_meta.json"
+    },
+    "preprocessing": {
+      "imputation": "median",
+      "scaling": "zscore",
+      "fit_on": "training_rows_only"
+    }
+  },
+  "device": {
+    "input_file": "device_features.jsonl",
+    "entity_type": "device",
+    "source_rows": 3149,
+    "eligible_rows": 2701,
+    "excluded_rows": 448,
+    "parse_errors": 0,
+    "training_rows": 2160,
+    "inference_rows": 541,
+    "feature_count": 9,
+    "features": [
+      "cpu_pct_15m_mean",
+      "cpu_pct_5m_mean",
+      "icmp_loss_pct_15m_mean",
+      "icmp_loss_pct_5m_mean",
+      "icmp_rtt_sec_15m_mean",
+      "icmp_rtt_sec_5m_mean",
+      "interface_count",
+      "interfaces_with_counter_reset",
+      "interfaces_with_oper_down"
+    ],
+    "quality_gate": {
+      "recent_coverage_min": 0.8,
+      "baseline_coverage_min": 0.8,
+      "excluded_reason_counts": {
+        "recent_coverage_below_threshold": 198,
+        "baseline_coverage_below_threshold": 448,
+        "no_previous_window_baseline": 265
+      }
+    },
+    "feature_selection": {
+      "entity_type": "device",
+      "rows": 2701,
+      "candidate_numeric_features": 229,
+      "selected_features": 9,
+      "min_presence": 0.8,
+      "missing_contract_features": [
+        "discard_total_rate_15m",
+        "discard_total_rate_5m",
+        "discard_total_rate_behavior_5m_change",
+        "discard_total_rate_behavior_5m_change_pct",
+        "discard_total_rate_behavior_5m_recent_to_baseline_ratio",
+        "error_total_rate_15m",
+        "error_total_rate_5m",
+        "error_total_rate_behavior_5m_change",
+        "error_total_rate_behavior_5m_change_pct",
+        "error_total_rate_behavior_5m_recent_to_baseline_ratio",
+        "in_bps_15m_mean",
+        "in_bps_5m_mean",
+        "in_bps_behavior_5m_change",
+        "in_bps_behavior_5m_change_pct",
+        "in_bps_behavior_5m_recent_to_baseline_ratio",
+        "in_discard_rate_15m_mean",
+        "in_discard_rate_5m_mean",
+        "in_error_rate_15m_mean",
+        "in_error_rate_5m_mean",
+        "in_out_bps_ratio_15m",
+        "in_out_bps_ratio_5m",
+        "in_out_pps_ratio_15m",
+        "in_out_pps_ratio_5m",
+        "in_pps_15m_mean",
+        "in_pps_5m_mean",
+        "in_pps_behavior_5m_change",
+        "in_pps_behavior_5m_change_pct",
+        "in_pps_behavior_5m_recent_to_baseline_ratio",
+        "oper_status_last",
+        "out_bps_15m_mean",
+        "out_bps_5m_mean",
+        "out_bps_behavior_5m_change",
+        "out_bps_behavior_5m_change_pct",
+        "out_bps_behavior_5m_recent_to_baseline_ratio",
+        "out_discard_rate_15m_mean",
+        "out_discard_rate_5m_mean",
+        "out_error_rate_15m_mean",
+        "out_error_rate_5m_mean",
+        "out_pps_15m_mean",
+        "out_pps_5m_mean",
+        "out_pps_behavior_5m_change",
+        "out_pps_behavior_5m_change_pct",
+        "out_pps_behavior_5m_recent_to_baseline_ratio",
+        "packet_total_pps_15m",
+        "packet_total_pps_5m",
+        "packet_total_pps_behavior_5m_change",
+        "packet_total_pps_behavior_5m_change_pct",
+        "packet_total_pps_behavior_5m_recent_to_baseline_ratio",
+        "packet_total_pps_max",
+        "packet_total_pps_mean",
+        "packet_total_pps_sum",
+        "traffic_total_bps_15m",
+        "traffic_total_bps_5m",
+        "traffic_total_bps_behavior_5m_change",
+        "traffic_total_bps_behavior_5m_change_pct",
+        "traffic_total_bps_behavior_5m_recent_to_baseline_ratio",
+        "traffic_variability_5m"
+      ],
+      "excluded_feature_count": 101,
+      "presence": {
+        "baseline_metric_coverage_ratio_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_expected_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_expected_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_missing_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_missing_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_presence_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "baseline_metric_presence_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_15m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_5m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_baseline_mean_15m": {
+          "count": 2220,
+          "ratio": 0.821917808219178
+        },
+        "cpu_pct_baseline_mean_5m": {
+          "count": 2700,
+          "ratio": 0.9996297667530544
+        },
+        "cpu_pct_baseline_std_15m": {
+          "count": 2220,
+          "ratio": 0.821917808219178
+        },
+        "cpu_pct_baseline_std_5m": {
+          "count": 2700,
+          "ratio": 0.9996297667530544
+        },
+        "cpu_pct_behavior_15m_change": {
+          "count": 2220,
+          "ratio": 0.821917808219178
+        },
+        "cpu_pct_behavior_15m_change_pct": {
+          "count": 2174,
+          "ratio": 0.8048870788596816
+        },
+        "cpu_pct_behavior_15m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_behavior_15m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_behavior_15m_recent_to_baseline_ratio": {
+          "count": 2174,
+          "ratio": 0.8048870788596816
+        },
+        "cpu_pct_behavior_5m_change": {
+          "count": 2700,
+          "ratio": 0.9996297667530544
+        },
+        "cpu_pct_behavior_5m_change_pct": {
+          "count": 2634,
+          "ratio": 0.9751943724546465
+        },
+        "cpu_pct_behavior_5m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_behavior_5m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "cpu_pct_behavior_5m_recent_to_baseline_ratio": {
+          "count": 2634,
+          "ratio": 0.9751943724546465
+        },
+        "discard_total_rate_max": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "discard_total_rate_sum": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "discard_total_rate_sum_present": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "error_total_rate_max": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "error_total_rate_sum": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "error_total_rate_sum_present": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "fan_status_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "fan_status_15m_last": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_15m_max": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_15m_mean": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_15m_min": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_15m_range": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_15m_std": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "fan_status_5m_last": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_max": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_mean": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_min": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_range": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_5m_std": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "fan_status_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "fan_status_baseline_mean_15m": {
+          "count": 697,
+          "ratio": 0.2580525731210663
+        },
+        "fan_status_baseline_mean_5m": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "fan_status_baseline_std_15m": {
+          "count": 697,
+          "ratio": 0.2580525731210663
+        },
+        "fan_status_baseline_std_5m": {
+          "count": 856,
+          "ratio": 0.31691965938541283
+        },
+        "icmp_loss_pct_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_15m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_5m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_baseline_mean_15m": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_loss_pct_baseline_mean_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_baseline_std_15m": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_loss_pct_baseline_std_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_behavior_15m_change": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_loss_pct_behavior_15m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_behavior_15m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_behavior_5m_change": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_behavior_5m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_loss_pct_behavior_5m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_15m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_last": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_max": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_mean": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_min": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_range": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_5m_std": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_baseline_mean_15m": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_rtt_sec_baseline_mean_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_baseline_std_15m": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_rtt_sec_baseline_std_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_15m_change": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_rtt_sec_behavior_15m_change_pct": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_rtt_sec_behavior_15m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_15m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_15m_recent_to_baseline_ratio": {
+          "count": 2221,
+          "ratio": 0.8222880414661237
+        },
+        "icmp_rtt_sec_behavior_5m_change": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_5m_change_pct": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_5m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_5m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "icmp_rtt_sec_behavior_5m_recent_to_baseline_ratio": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "interface_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "interfaces_with_counter_reset": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "interfaces_with_oper_down": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_15m_last": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_max": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_mean": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_min": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_range": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_std": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_5m_last": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_max": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_mean": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_min": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_range": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_std": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_baseline_mean_15m": {
+          "count": 1064,
+          "ratio": 0.39392817475009256
+        },
+        "memory_pct_baseline_mean_5m": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_baseline_std_15m": {
+          "count": 1064,
+          "ratio": 0.39392817475009256
+        },
+        "memory_pct_baseline_std_5m": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_15m_change": {
+          "count": 1064,
+          "ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_15m_change_pct": {
+          "count": 1064,
+          "ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_15m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_behavior_15m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_behavior_15m_recent_to_baseline_ratio": {
+          "count": 1064,
+          "ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_5m_change": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_5m_change_pct": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_5m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_behavior_5m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "memory_pct_behavior_5m_recent_to_baseline_ratio": {
+          "count": 1285,
+          "ratio": 0.4757497223250648
+        },
+        "packet_total_pps_sum_present": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "psu_status_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "psu_status_15m_last": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_15m_max": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_15m_mean": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_15m_min": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_15m_range": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_15m_std": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "psu_status_5m_last": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_max": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_mean": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_min": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_range": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_5m_std": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "psu_status_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "psu_status_baseline_mean_15m": {
+          "count": 779,
+          "ratio": 0.28841169937060346
+        },
+        "psu_status_baseline_mean_5m": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "psu_status_baseline_std_15m": {
+          "count": 779,
+          "ratio": 0.28841169937060346
+        },
+        "psu_status_baseline_std_5m": {
+          "count": 958,
+          "ratio": 0.3546834505738615
+        },
+        "temperature_c_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_15m_last": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_max": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_mean": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_min": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_range": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_std": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_5m_last": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_max": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_mean": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_min": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_range": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_std": {
+          "count": 1123,
+          "ratio": 0.4157719363198815
+        },
+        "temperature_c_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_baseline_mean_15m": {
+          "count": 911,
+          "ratio": 0.3372824879674195
+        },
+        "temperature_c_baseline_mean_5m": {
+          "count": 1120,
+          "ratio": 0.4146612365790448
+        },
+        "temperature_c_baseline_std_15m": {
+          "count": 911,
+          "ratio": 0.3372824879674195
+        },
+        "temperature_c_baseline_std_5m": {
+          "count": 1120,
+          "ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_15m_change": {
+          "count": 911,
+          "ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_15m_change_pct": {
+          "count": 911,
+          "ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_15m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_behavior_15m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_behavior_15m_recent_to_baseline_ratio": {
+          "count": 911,
+          "ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_5m_change": {
+          "count": 1120,
+          "ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_5m_change_pct": {
+          "count": 1120,
+          "ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_5m_decrease_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_behavior_5m_increase_flag": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "temperature_c_behavior_5m_recent_to_baseline_ratio": {
+          "count": 1120,
+          "ratio": 0.4146612365790448
+        },
+        "traffic_total_bps_max": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "traffic_total_bps_mean": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "traffic_total_bps_sum": {
+          "count": 1224,
+          "ratio": 0.4531654942613847
+        },
+        "traffic_total_bps_sum_present": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "uptime_15m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "uptime_15m_last": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_15m_max": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_15m_mean": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_15m_min": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_15m_range": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_15m_std": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_count": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "uptime_5m_last": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_max": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_mean": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_min": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_range": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_5m_std": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_baseline_count_15m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "uptime_baseline_count_5m": {
+          "count": 2701,
+          "ratio": 1.0
+        },
+        "uptime_baseline_mean_15m": {
+          "count": 1021,
+          "ratio": 0.3780081451314328
+        },
+        "uptime_baseline_mean_5m": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_baseline_std_15m": {
+          "count": 1021,
+          "ratio": 0.3780081451314328
+        },
+        "uptime_baseline_std_5m": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_growth_sec_15m": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        },
+        "uptime_growth_sec_5m": {
+          "count": 1232,
+          "ratio": 0.4561273602369493
+        }
+      },
+      "excluded": {
+        "discard_total_rate_max": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "discard_total_rate_sum": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "error_total_rate_max": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "error_total_rate_sum": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "fan_status_15m_last": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_15m_max": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_15m_mean": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_15m_min": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_15m_range": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_15m_std": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_last": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_max": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_mean": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_min": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_range": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_5m_std": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 697,
+          "presence_ratio": 0.2580525731210663
+        },
+        "fan_status_baseline_mean_5m": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "fan_status_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 697,
+          "presence_ratio": 0.2580525731210663
+        },
+        "fan_status_baseline_std_5m": {
+          "reason": "below_min_presence",
+          "presence": 856,
+          "presence_ratio": 0.31691965938541283
+        },
+        "memory_pct_15m_last": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_max": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_min": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_range": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_15m_std": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_last": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_max": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_min": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_range": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_5m_std": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 1064,
+          "presence_ratio": 0.39392817475009256
+        },
+        "memory_pct_baseline_mean_5m": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 1064,
+          "presence_ratio": 0.39392817475009256
+        },
+        "memory_pct_baseline_std_5m": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 1064,
+          "presence_ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 1064,
+          "presence_ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 1064,
+          "presence_ratio": 0.39392817475009256
+        },
+        "memory_pct_behavior_5m_change": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "memory_pct_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 1285,
+          "presence_ratio": 0.4757497223250648
+        },
+        "psu_status_15m_last": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_15m_max": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_15m_mean": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_15m_min": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_15m_range": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_15m_std": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_last": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_max": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_mean": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_min": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_range": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_5m_std": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 779,
+          "presence_ratio": 0.28841169937060346
+        },
+        "psu_status_baseline_mean_5m": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "psu_status_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 779,
+          "presence_ratio": 0.28841169937060346
+        },
+        "psu_status_baseline_std_5m": {
+          "reason": "below_min_presence",
+          "presence": 958,
+          "presence_ratio": 0.3546834505738615
+        },
+        "temperature_c_15m_last": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_max": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_min": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_range": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_15m_std": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_last": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_max": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_min": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_range": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_5m_std": {
+          "reason": "below_min_presence",
+          "presence": 1123,
+          "presence_ratio": 0.4157719363198815
+        },
+        "temperature_c_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 911,
+          "presence_ratio": 0.3372824879674195
+        },
+        "temperature_c_baseline_mean_5m": {
+          "reason": "below_min_presence",
+          "presence": 1120,
+          "presence_ratio": 0.4146612365790448
+        },
+        "temperature_c_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 911,
+          "presence_ratio": 0.3372824879674195
+        },
+        "temperature_c_baseline_std_5m": {
+          "reason": "below_min_presence",
+          "presence": 1120,
+          "presence_ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_15m_change": {
+          "reason": "below_min_presence",
+          "presence": 911,
+          "presence_ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_15m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 911,
+          "presence_ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_15m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 911,
+          "presence_ratio": 0.3372824879674195
+        },
+        "temperature_c_behavior_5m_change": {
+          "reason": "below_min_presence",
+          "presence": 1120,
+          "presence_ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_5m_change_pct": {
+          "reason": "below_min_presence",
+          "presence": 1120,
+          "presence_ratio": 0.4146612365790448
+        },
+        "temperature_c_behavior_5m_recent_to_baseline_ratio": {
+          "reason": "below_min_presence",
+          "presence": 1120,
+          "presence_ratio": 0.4146612365790448
+        },
+        "traffic_total_bps_max": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "traffic_total_bps_mean": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "traffic_total_bps_sum": {
+          "reason": "below_min_presence",
+          "presence": 1224,
+          "presence_ratio": 0.4531654942613847
+        },
+        "uptime_15m_last": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_15m_max": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_15m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_15m_min": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_15m_range": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_15m_std": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_last": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_max": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_mean": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_min": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_range": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_5m_std": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_baseline_mean_15m": {
+          "reason": "below_min_presence",
+          "presence": 1021,
+          "presence_ratio": 0.3780081451314328
+        },
+        "uptime_baseline_mean_5m": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_baseline_std_15m": {
+          "reason": "below_min_presence",
+          "presence": 1021,
+          "presence_ratio": 0.3780081451314328
+        },
+        "uptime_baseline_std_5m": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_growth_sec_15m": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        },
+        "uptime_growth_sec_5m": {
+          "reason": "below_min_presence",
+          "presence": 1232,
+          "presence_ratio": 0.4561273602369493
+        }
+      }
+    },
+    "outputs": {
+      "train_csv": "ml_dataset/ml_device_train.csv",
+      "inference_csv": "ml_dataset/ml_device_inference.csv",
+      "train_meta": "ml_dataset/ml_device_train_meta.json",
+      "inference_meta": "ml_dataset/ml_device_inference_meta.json"
+    },
+    "preprocessing": {
+      "imputation": "median",
+      "scaling": "zscore",
+      "fit_on": "training_rows_only"
+    }
+  },
+  "global": {
+    "status": "PASS",
+    "notes": [
+      "Training preprocessing statistics are fit only on chronological training rows.",
+      "Warm-up/insufficient-history rows are retained in the original feature store but excluded from the ML matrix.",
+      "The interface and device models are kept separate because their feature semantics differ."
+    ]
+  },
+  "outputs": {
+    "feature_schema": "ml_dataset/ml_feature_schema.json"
+  }
+}

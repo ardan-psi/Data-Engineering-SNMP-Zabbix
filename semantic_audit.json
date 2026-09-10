@@ -1,0 +1,77 @@
+{
+  "total_metrics": 7480,
+  "usable_metrics": 7478,
+  "excluded_metrics": 2,
+  "semantic_types": {
+    "counter": 3928,
+    "gauge": 447,
+    "rate": 2049,
+    "state": 1054
+  },
+  "transformations": {
+    "delta_rate": 3928,
+    "direct": 3550
+  },
+  "confidence": {
+    "high": 7470,
+    "medium": 8
+  },
+  "canonical_metrics": {
+    "cpu_pct": 108,
+    "fan_status": 47,
+    "icmp_loss_pct": 102,
+    "icmp_rtt_sec": 102,
+    "in_bps": 983,
+    "in_discard_rate": 982,
+    "in_error_rate": 982,
+    "in_pps": 42,
+    "memory_pct": 31,
+    "oper_status": 980,
+    "out_bps": 982,
+    "out_discard_rate": 982,
+    "out_error_rate": 982,
+    "out_pps": 42,
+    "psu_status": 27,
+    "temperature_c": 75,
+    "uptime": 29
+  },
+  "unknown_semantic": 0,
+  "unknown_metrics": [],
+  "excluded_by_reason": {
+    "unsupported_temperature_sensor": 2
+  },
+  "excluded_metric_details": [
+    {
+      "itemid": "79395",
+      "hostid": "10725",
+      "host": "10.0.0.50",
+      "key": "sensor.temp.value[300000023]",
+      "semantic_type": "unknown",
+      "transformation": "direct",
+      "canonical_metric": null,
+      "confidence": "high",
+      "exclude_reason": "unsupported_temperature_sensor"
+    },
+    {
+      "itemid": "79396",
+      "hostid": "10725",
+      "host": "10.0.0.50",
+      "key": "sensor.temp.value[300000055]",
+      "semantic_type": "unknown",
+      "transformation": "direct",
+      "canonical_metric": null,
+      "confidence": "high",
+      "exclude_reason": "unsupported_temperature_sensor"
+    }
+  ],
+  "duplicate_itemids": {},
+  "duplicate_itemid_count": 0,
+  "issues": [],
+  "issue_counts": {},
+  "validation": {
+    "unknown_semantic_count": 0,
+    "excluded_count": 2,
+    "duplicate_itemid_count": 0,
+    "total_issue_count": 0
+  }
+}

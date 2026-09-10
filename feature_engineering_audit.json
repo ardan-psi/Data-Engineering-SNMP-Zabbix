@@ -1,0 +1,105 @@
+{
+  "audit": {
+    "name": "feature_engineering_audit",
+    "version": "2.1",
+    "generated_at": "2026-09-09T08:03:19.800708+00:00"
+  },
+  "input": {
+    "history_file": "transformed_history.jsonl",
+    "metadata_file": "scoped_metrics.json",
+    "bucket_sec": 60,
+    "windows_sec": [
+      300,
+      900
+    ]
+  },
+  "source": {
+    "scoped_items": 7195,
+    "history_records_after_filter": 208790,
+    "load_stats": {
+      "lines": 236510,
+      "accepted_records": 208790,
+      "null_nonreset_values": 3532,
+      "unrelated_records": 27720
+    },
+    "deduplication": {
+      "duplicate_groups": 0,
+      "duplicate_rows_removed": 0,
+      "conflicting_duplicate_groups": 0
+    }
+  },
+  "entities": {
+    "interface_entities": 883,
+    "device_entities": 53
+  },
+  "outputs": {
+    "interface_rows": 52137,
+    "device_rows": 3149,
+    "interface_feature_count": 349,
+    "device_feature_count": 247
+  },
+  "coverage": {
+    "interface_5m": {
+      "rows": 52137,
+      "mean": 0.9874232448028409,
+      "min": 0.14285714285714285,
+      "max": 1.0
+    },
+    "device_5m": {
+      "rows": 3149,
+      "mean": 0.9701598391023605,
+      "min": 0.3333333333333333,
+      "max": 1.0
+    },
+    "interface_previous_baseline_5m": {
+      "rows": 52137,
+      "mean": 0.9027562000115081,
+      "min": 0.0,
+      "max": 1.0,
+      "warmup_rows": 4415
+    },
+    "device_previous_baseline_5m": {
+      "rows": 3149,
+      "mean": 0.8883084577114427,
+      "min": 0.0,
+      "max": 1.0,
+      "warmup_rows": 265
+    }
+  },
+  "quality_signals": {
+    "interface_rows_with_counter_reset_5m": 921,
+    "interface_rows_with_oper_status_change_5m": 40,
+    "interface_warmup_rows_5m": 4415,
+    "device_warmup_rows_5m": 265
+  },
+  "feature_contract": {
+    "interface_identity": "hostid + ifIndex",
+    "recent_window": "(T-window, T]",
+    "previous_window_baseline": "(T-2*window, T-window]",
+    "behavior_change": "recent-window mean compared with the immediately preceding equal-duration baseline mean",
+    "behavior_change_fields": [
+      "change",
+      "change_pct",
+      "recent_to_baseline_ratio",
+      "increase_flag",
+      "decrease_flag"
+    ],
+    "counter_reset_policy": "Counter resets remain contextual quality signals and are not converted into negative traffic/error/discard rates.",
+    "missing_value_policy": "Missing metrics remain null in the feature store and are tracked using metric coverage and baseline coverage fields.",
+    "warmup_policy": "Rows without previous-window baseline are retained for observability but should not be used for ML training until a training quality gate excludes insufficient-history rows.",
+    "future_leakage_policy": "Only past-looking windows are used."
+  },
+  "feature_quality": {
+    "interface_mean_numeric_features": 244.83311276061147,
+    "device_mean_numeric_features": 171.88345506510004
+  },
+  "warnings": [
+    "Interface warm-up rows exist without a previous 5m baseline: 4,415.",
+    "Device warm-up rows exist without a previous 5m baseline: 265."
+  ],
+  "output_files": {
+    "interface_features": "interface_features.jsonl",
+    "device_features": "device_features.jsonl",
+    "audit": "feature_engineering_audit.json"
+  }
+}

@@ -1,0 +1,396 @@
+#!/usr/bin/env python3
+
+import json
+from pathlib import Path
+from datetime import datetime, timezone
+
+
+# ============================================================
+# Configuration
+# ============================================================
+
+INPUT_FILE = Path("zabbix_inventory.json")
+OUTPUT_FILE = Path("scope_config.json")
+
+
+# ============================================================
+# Explicit AI-NOC scope
+#
+# IMPORTANT:
+#   - hostid is the authoritative identity
+#   - each host can have only ONE role
+#   - everything else is excluded
+# ============================================================
+
+ROLE_HOSTIDS = {
+    "switch": {
+        # ICX access/core switches
+        "10670",
+        "10671",
+        "10672",
+        "10673",
+        "10674",
+        "10675",
+        "10676",
+        "10677",
+        "10678",
+
+        # Mikrotik Exxadata is explicitly treated as switch
+        "10706",
+
+        # ICX / Sardina
+        "10713",
+        "10714",
+
+        # Nexus
+        "10725",
+
+        # CES / OpenStack CORE / ICX / ISP / VDX
+        "10767",
+        "10768",
+        "10769",
+        "10770",
+        "10778",
+        "10779",
+        "10780",
+
+        # Extreme
+        "10785",
+
+        # Additional ICX / VDX devices discovered in inventory
+        "10708",
+        "10709",
+        "10710",
+        "10711",
+    },
+
+    "router": {
+        "10720",   # Mikrotik-11
+        "10721",   # Mikrotik-12
+    },
+
+    "firewall": {
+        "10707",   # Fortigate-60F
+        "10730",   # pfSense
+        "10808",   # FW-RUIJIE
+    },
+
+    "access_point": {
+        # Ruijie AP
+        "10688",
+        "10689",
+        "10690",
+        "10691",
+        "10692",
+        "10693",
+        "10694",
+        "10695",
+        "10696",
+        "10697",
+        "10698",
+        "10699",
+        "10700",
+        "10701",
+        "10702",
+        "10703",
+        "10704",
+        "10705",
+
+        "10788",
+        "10789",
+        "10790",
+        "10791",
+        "10792",
+        "10793",
+    },
+}
+
+
+# ============================================================
+# Validation
+# ============================================================
+
+def validate_role_map():
+    """
+    Make sure one hostid cannot belong to multiple roles.
+    """
+
+    seen = {}
+
+    for role, hostids in ROLE_HOSTIDS.items():
+        for hostid in hostids:
+
+            if hostid in seen:
+                previous_role = seen[hostid]
+
+                raise ValueError(
+                    f"HostID {hostid} is assigned to multiple roles: "
+                    f"{previous_role} and {role}"
+                )
+
+            seen[hostid] = role
+
+
+# ============================================================
+# Helpers
+# ============================================================
+
+def host_entry(host):
+    """
+    Normalize host information stored in scope_config.json.
+    """
+
+    return {
+        "hostid": str(host["hostid"]),
+        "host": host.get("host", ""),
+        "name": host.get("name", ""),
+    }
+
+
+def load_inventory():
+    with INPUT_FILE.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if "hosts" not in data:
+        raise ValueError(
+            f"{INPUT_FILE} does not contain 'hosts'"
+        )
+
+    return data
+
+
+# ============================================================
+# Main
+# ============================================================
+
+def build_scope_config():
+
+    validate_role_map()
+
+    inventory = load_inventory()
+    hosts = inventory["hosts"]
+
+    inventory_by_id = {
+        str(host["hostid"]): host
+        for host in hosts
+    }
+
+    scope = {
+        "switch": [],
+        "router": [],
+        "firewall": [],
+        "access_point": [],
+    }
+
+    excluded = []
+    missing_from_inventory = []
+
+    # --------------------------------------------------------
+    # Build include section
+    # --------------------------------------------------------
+
+    for role, hostids in ROLE_HOSTIDS.items():
+
+        for hostid in sorted(hostids, key=int):
+
+            host = inventory_by_id.get(hostid)
+
+            if host is None:
+
+                missing_from_inventory.append({
+                    "hostid": hostid,
+                    "role": role,
+                })
+
+                continue
+
+            scope[role].append(
+                host_entry(host)
+            )
+
+    # --------------------------------------------------------
+    # Everything not explicitly included = EXCLUDE
+    # --------------------------------------------------------
+
+    included_hostids = set()
+
+    for role_entries in scope.values():
+        for entry in role_entries:
+            included_hostids.add(
+                entry["hostid"]
+            )
+
+    for host in hosts:
+
+        hostid = str(host["hostid"])
+
+        if hostid not in included_hostids:
+
+            excluded.append(
+                host_entry(host)
+            )
+
+    # --------------------------------------------------------
+    # Sort excluded hosts
+    # --------------------------------------------------------
+
+    excluded.sort(
+        key=lambda x: int(x["hostid"])
+    )
+
+    # --------------------------------------------------------
+    # Generate final configuration
+    # --------------------------------------------------------
+
+    config = {
+        "version": "1.1",
+        "description": "AI-NOC network device scope",
+        "source": INPUT_FILE.name,
+        "generated_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+
+        "policy": {
+            "default_action": "exclude",
+            "identity": "hostid",
+            "one_host_one_role": True,
+            "automatic_role_detection": False,
+        },
+
+        "include": scope,
+
+        "exclude_hostids": [
+            entry["hostid"]
+            for entry in excluded
+        ],
+
+        "exclude": excluded,
+
+        "missing_from_inventory": missing_from_inventory,
+
+        "summary": {
+            "inventory_hosts": len(hosts),
+
+            "included_hosts": len(
+                included_hostids
+            ),
+
+            "excluded_hosts": len(
+                excluded
+            ),
+
+            "switch": len(
+                scope["switch"]
+            ),
+
+            "router": len(
+                scope["router"]
+            ),
+
+            "firewall": len(
+                scope["firewall"]
+            ),
+
+            "access_point": len(
+                scope["access_point"]
+            ),
+
+            "missing_from_inventory": len(
+                missing_from_inventory
+            ),
+        },
+    }
+
+    return config
+
+
+def main():
+
+    config = build_scope_config()
+
+    with OUTPUT_FILE.open(
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            config,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
+
+        f.write("\n")
+
+    print("=" * 70)
+    print("AI-NOC Scope Configuration")
+    print("=" * 70)
+
+    print(
+        f"Inventory hosts : "
+        f"{config['summary']['inventory_hosts']}"
+    )
+
+    print(
+        f"Included hosts  : "
+        f"{config['summary']['included_hosts']}"
+    )
+
+    print(
+        f"Excluded hosts  : "
+        f"{config['summary']['excluded_hosts']}"
+    )
+
+    print()
+
+    print(
+        f"Switch          : "
+        f"{config['summary']['switch']}"
+    )
+
+    print(
+        f"Router          : "
+        f"{config['summary']['router']}"
+    )
+
+    print(
+        f"Firewall        : "
+        f"{config['summary']['firewall']}"
+    )
+
+    print(
+        f"Access Point    : "
+        f"{config['summary']['access_point']}"
+    )
+
+    print()
+
+    print(
+        f"Missing         : "
+        f"{config['summary']['missing_from_inventory']}"
+    )
+
+    print()
+
+    if config["missing_from_inventory"]:
+
+        print("WARNING: HostID berikut tidak ditemukan:")
+
+        for item in config["missing_from_inventory"]:
+
+            print(
+                f"  {item['hostid']} "
+                f"-> {item['role']}"
+            )
+
+    print()
+
+    print(
+        f"Generated: {OUTPUT_FILE}"
+    )
+
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()
